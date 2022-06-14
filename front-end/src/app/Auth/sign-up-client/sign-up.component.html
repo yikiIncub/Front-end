@@ -1,0 +1,118 @@
+<main class="main">
+
+  <mat-toolbar class="toolbar">
+    <div class="sociaux">
+      <a href="#"><img src="../../assets/facebook.jpg" alt="../../assets/facebook.jpg" class="icons"></a>
+      <a href="#"><img src="../../assets/twitter.png" alt="../../assets/twitter.png" class="icons"></a> 
+      <a href="#"> <img src="../../assets/instagram.jpg" alt="../../assets/instagram.jpg" class="icons"></a> 
+  </div>
+  
+    <a mat-button [routerLink]="['/home']" [routerLinkActive]="'active'" ><img src="../../../assets/yiki.png" alt="../../../assets/yiki.png" class="logo"></a>
+  </mat-toolbar>
+
+
+  <mat-card class="card-content">
+    <div class="formulaire">
+      <div class="logo-connexion">
+        <h1>Inscription</h1>
+        <img src="../../../assets/yiki.png" alt="../../../assets/yiki.png" srcset="" width="80px" height="80px">
+      </div>
+      <!--Le formulaire-->
+      <form [formGroup]="formdata">
+
+        <!--Zone d'enregistrement du nom et du prenom-->
+        <div class="nom-prenom">
+
+              <!--Champ de saisie du nom-->
+
+          <div>
+            <mat-form-field appearance="outline">
+              <mat-label>Nom</mat-label>
+              <input type="text" matInput id="nom" formControlName="name" placeholder="Votre nom" required="true">
+              <mat-error *ngIf="formdata.controls['name'].valid==false && formdata.controls['name'].touched"
+                class="error">Le nom doit
+                contenir 2 lettres minimum </mat-error>
+            </mat-form-field>
+          </div>
+
+              <!--Champ de saisie du prenom-->
+
+          <div>
+            <mat-form-field appearance="outline">
+              <mat-label>Prenom</mat-label>
+              <input matInput type="text" id="prenom" formControlName="prenom" placeholder="Votre prenom"
+                required="true">
+              <mat-error *ngIf="formdata.controls['prenom'].valid==false && formdata.controls['prenom'].touched"
+                class="error">Le
+                prenom doit contenir 3 lettres minimum</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        
+        <!--Champ de saisie email-->
+
+        <div class="email">
+          <mat-form-field appearance="outline">
+            <mat-label for="email">E-mail</mat-label>
+            <input matInput type="email" id="email" formControlName="email" placeholder="Ex:monemail@emailcom" >
+            <mat-error *ngIf="formdata.controls['email'].valid==false && formdata.controls['email'].touched"
+              class="error">Veillez
+              entrez une adresse email valide </mat-error>
+          </mat-form-field>
+        </div>
+
+           <!--La zone de d'enregistrement du mot de passe-->
+
+        <div class="mot-de-passe">
+
+             <!--Champs de saisie du mot de passe-->
+
+            <mat-form-field appearance="outline">
+              <mat-label>Mot de passe</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" type="password" id="mot-de-Passe"
+                formControlName="password" placeholder="Votre mot de passe">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="formdata.controls['password'].valid==false && formdata.controls['password'].touched"
+                class="error">
+                Veillez saisir un mot de passe de 8 caracteres minimunm </mat-error>
+            </mat-form-field>
+
+             <!--Champs de saisie confirmation du mot de passe-->
+
+            <mat-form-field appearance="outline">
+              <mat-label>Confirmer mot de passe</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" type="password" id="mot-de-Passe"
+                formControlName="password_confirmation" placeholder="Votre mot de passe">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+               <br>
+              <mat-error
+                *ngIf="formdata.controls['password_confirmation'].value !=formdata.controls['password'].value && formdata.controls['password_confirmation'].touched"
+                class="error">
+                Les mots de passe ne correspondent pas </mat-error>
+            </mat-form-field>
+        </div>
+
+            <!--Zone du des liens du bas de la cards-->
+
+        <div class="div-btn">
+          <button type="submit" mat-raised-button class="btn-submit" (click)="test()">S'inscrire</button>
+        </div>
+
+        <div class="sign-ou">
+          <span>ou</span>
+          <a routerLink="/sign-in" class="btn-deja-un-compte">J'ai deja un compte <button mat-button>Se connecter</button></a>  
+        </div>
+  
+      </form>
+    </div>
+
+  </mat-card>
+
+</main>

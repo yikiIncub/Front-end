@@ -1,0 +1,128 @@
+.main{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 90%;
+  width: 100%;
+  background-color: #eee;
+  box-sizing: border-box;
+}
+.card-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 400px;
+  border-radius: 10px;
+  //box-shadow: 5px 5px 4px 4px #2a2b25;
+}
+.logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.error{
+  font-size: 100%;
+}
+
+.formulaire{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.btn-submit{
+  border-radius: 10px;
+  background-color: #243474;
+  color: white;
+}
+
+.btn-deja-un-compte{
+text-decoration: none;
+color: rgba(0, 0, 0, 0.784);
+}
+
+.btn-submit:hover{
+  background-color: #04143C;
+  color: white;
+}
+
+.icons{
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+}
+
+.toolbar{
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  background-color: #eee;
+}
+
+.logo-connexion{
+  padding:10px
+}
+
+.div-btn{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.sign-ou{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 400px) {
+  .card-content{
+    font-size: 100%;
+    width: 400px;
+  };
+  .nom-prenom{
+    display: flex;
+    flex-direction: row;
+  };
+  mat-form-field{
+    width: 100%;
+  }
+}
+
+.logo{
+  width: 60px;
+  height: 60px;
+}
+
+.logo-connexion{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 399px) {
+  .card-content{
+    font-size: 100%;
+    width: 90%;
+  };
+  .nom-prenom{
+    display: flex;
+    flex-direction: column;
+  };
+  mat-form-field{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+

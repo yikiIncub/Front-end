@@ -1,0 +1,259 @@
+    main {
+   padding: 0px;
+   margin: 0px;
+   background-color: #eee;
+}
+mat-toolbar{
+   padding-left: 12%;
+   background-color: #eee;
+   color: #FF531A;
+}
+
+
+.voir-plus{
+   display: flex;
+   flex-flow: wrap row;
+   justify-content: center;
+   color: #243474;
+   .btn{
+      border: solid 1px;
+      transition: all 0.8s;
+   }
+}
+
+.btn:hover{
+   background-color: #243474;
+   color: white;
+   border: solid 1px;
+}
+
+
+/** Section des projet afficher a la une**/
+
+.section-projet-a-la-une{
+   padding: 10px;
+   margin: 10px;
+   padding-top: 0px;
+   margin-top: 0px;
+
+   mat-card-title,
+   .description{
+      display: flex;
+      flex-flow: wrap column;
+      text-align: center;
+      justify-content: center;
+   };
+
+   mat-card-title{
+      background-color:#243474;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+   }
+
+   .savoir-plus{
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: end;
+      padding: 10px;
+
+      .btn-savoir-plus{
+         background-color:#243474;
+         color: white;
+         transition: all 0.8s
+      };
+
+      .btn-savoir-plus:hover{
+         background-color:#243474;
+         color: white;
+      }
+   };
+
+   span{
+      font-weight: bold;
+      font-size: 16px;
+   }
+}
+
+.card-projet-a-la-une{
+   margin: 10px;
+   transition:all 0.8s;
+ }
+
+.card-projet-a-la-une:hover {
+border: solid orange 1px;
+border-radius: 10px;
+padding: 30px;
+}
+
+.space-card-content{
+   display: flex;
+   flex-flow: wrap row;
+   justify-content: space-between;
+   text-align: center;
+}
+
+.container{
+   padding-left: 10%;
+   padding-right: 10%;
+}
+
+
+
+/** Section info de la boite**/
+
+.section-info-yiki{
+
+
+   .info-yiki{
+      padding-bottom: 100%;
+      transition: all 0.8s;
+   };
+
+   mat-card-title{
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: center;
+      text-align: center;
+      background-color:#243474;
+      color: white;
+      padding: 10px;
+  
+   }
+}
+
+.info-yiki:hover{
+   padding: 30px;
+   padding-bottom: 40%;
+   border: solid orange 2px;
+   border-radius: 10px;
+}
+
+.Projet-en-cours{
+   padding-left: 12%;
+};
+
+.projet-en-cours-de-realisation{
+   display: flex;
+   flex-flow: wrap row;
+   padding: 0;
+   padding-left: 10%;
+   padding-right: 8%;
+   width: 100%;
+
+   mat-card-title{
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: center;
+      color: #FF531A;
+      padding: 5px;
+      transition: all 0.8s;
+   }
+
+   .card-containt{
+      padding: 5px;
+      margin: 5px;
+      width: 30%;
+      transition: all 0.8s;
+
+   }
+
+   .card-containt:hover{
+      margin: 0px;
+      padding: 0px;
+      border: solid 1px orange;
+      border-radius: 10px;
+
+      mat-card-title{
+         padding: 10px
+      }
+   };
+
+   .card-projet{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+   };
+
+   span{
+      font-weight: 500;
+      font-size: 16px;
+      text-align: start;
+   };
+
+   mat-card{
+      background-color: #243474;
+      color: white;
+   }
+
+}
+
+.voir-plus{
+   display: flex;
+   flex-flow: wrap row;
+   justify-content: center;
+   color: #243474;
+
+   .btn{
+      border: solid 1px;
+   }
+}
+
+
+/**Projet deja realiser**/
+
+.Projets-deja-realiser{
+   padding: 0px;
+   padding-left: 10%;
+   padding-right: 10%;
+   width: 100%;
+   display: flex;
+   flex-flow: wrap row;
+
+   mat-card-title{
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: center;
+      color: #FF531A;
+      padding: 5px;
+      transition: all 0.8s;
+   };
+
+   .card-containt{
+      padding: 5px;
+      margin: 5px;
+      width: 30%;
+      transition: all 0.8s;
+   };
+
+   .card-containt:hover{
+      margin: 0px;
+      padding: 0px;
+      border: solid 1px orange;
+      border-radius: 10px;
+
+      mat-card-title{
+         padding: 10px
+      }
+   };
+
+   .card-projet{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+   };
+
+   span{
+      font-weight: 500;
+      font-size: 16px;
+      text-align: start;
+   }
+
+   
+   mat-card{
+      background-color: #243474;
+      color: white;
+   }
+
+
+}

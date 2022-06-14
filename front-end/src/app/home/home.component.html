@@ -1,0 +1,134 @@
+<main>
+    <mat-toolbar class="title-projet">
+         Projets a la une 
+    </mat-toolbar>
+
+    <div class="container" fxLayout="row" fxLayout.xs="column">
+
+        <div class="section-projet-a-la-une" fxFlex="70" fxFlex.xs="100">
+            <mat-card class="card-projet-a-la-une" *ngFor="let projet of projets">
+                <mat-card-title>{{projet.title}}</mat-card-title>
+
+                <mat-card-content>
+                    <div class="details">
+                        <div class="space-card-content">
+                            <span> Budget </span>
+                            <p> {{projet.budget}}</p>
+                        </div>
+
+                        <div class="space-card-content">
+                            <span> Competences</span>
+                            <p>{{projet.competences}}</p>
+                        </div>
+
+                        <div class="description">
+                            <span>Desciption</span>
+                            <p>{{projet.description}}</p>
+                        </div>
+                    </div>
+
+                </mat-card-content>
+
+                <mat-card-footer>
+                    <div class="savoir-plus">
+                        <div>
+                            <a mat-button class="btn-savoir-plus">Savoir plus</a>
+                        </div>
+                    </div>
+                </mat-card-footer>
+            </mat-card>
+
+            <div class="voir-plus">
+                <button mat-button class="btn">Voir plus de projets</button>
+            </div>
+        </div>
+
+        <div class="section-info-yiki" fxFlex="35" fxFlex.xs="100">
+            <mat-card class="info-yiki">
+                <mat-card-title>
+                    Yiki Startup Incubator
+                </mat-card-title>
+
+                <mat-card-content>
+                    Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Excepturi illo, rerum blanditiis voluptates
+                    veniam tempore ipsa reiciendis, amet, hic maiores neque asperiores dicta
+                    praesentium sit tempora iure est aut. Quae?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, explicabo? Magni doloribus maxime
+                    reprehenderit
+                    enim quaerat totam aspernatur, cumque sint laboriosam est pariatur deleniti quod, culpa autem
+                    molestiae cupiditate quibusdam.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores provident blanditiis
+                    ducimus error odio, excepturi in neque minima nobis nihil iusto non nisi quam vero dolor fugiat nemo
+                    autem illum!
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+        <mat-toolbar class="Projet-en-cours">
+            Projet en cours de realisation
+        </mat-toolbar>
+
+  
+        <div fxLayout="row" fxLayout.xs="column" class="projet-en-cours-de-realisation">
+            <div *ngFor="let projetsEncour of projetsEncours" class="card-containt">
+
+                <mat-card fxFlex="100">
+                    <mat-card-title class="title-projet-en-cours">{{projetsEncour.title}}</mat-card-title>
+                 
+                    <mat-card-content class="card-projet-en-cours">
+                        <div class="card-projet">
+                            <p>Client</p><span>{{projetsEncour.client}}</span>
+                        </div>
+                        <div class="card-projet">
+                            <p>Freelanceur</p><span>{{projetsEncour.freelance}}</span>
+                        </div>
+                        <div class="card-projet">
+                            <p>Date de debut</p><span>{{projetsEncour.date_debut}}</span>
+                        </div>
+                        <div class="card-projet">
+                            <p>Date de fin</p><span>{{projetsEncour.date_fin}}</span>
+                        </div>
+                
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <div class="voir-plus">
+            <button mat-button class="btn">Voir plus de projet</button>
+        </div>
+
+
+        <mat-toolbar>
+            Projets deja realiser
+        </mat-toolbar>
+
+        <div fxLayout="row" fxLayout.xs="column" class="Projets-deja-realiser">
+            <div *ngFor="let projetsEncour of projetsEncours" class="card-containt">
+                <mat-card class="card">
+                    <mat-card-title class="title-projet-en-cours">{{projetsEncour.title}}</mat-card-title>
+                    <mat-card-content class="card-projet-en-cours">
+                        <div class="card-projet">
+                            <p>Client</p><span>{{projetsEncour.client}}</span>
+                        </div>
+                        <div class="card-projet">
+                            <p>Freelanceur</p><span>{{projetsEncour.freelance}}</span>
+                        </div>
+                        <div class="card-projet">
+                            <p>Date de debut</p><span>{{projetsEncour.date_debut}}</span>
+                        </div>
+                        <div class="card-projet">
+                            <p>Date de fin</p><span>{{projetsEncour.date_fin}}</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <div class="voir-plus">
+            <button mat-button class="btn">Voir plus de projet</button>
+        </div>
+
+
+</main>

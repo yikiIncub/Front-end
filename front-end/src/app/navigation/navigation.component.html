@@ -1,0 +1,71 @@
+<mat-sidenav-container class="sidenav-container">
+  <!--Debut de la liste des elements du menu de gauche-->
+  <mat-sidenav position="end" #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/sign-in"><button mat-button (click)="drawer.close()">Connexion</button></a>
+      <a mat-list-item (click)="openChoixInscription()"><button mat-button>Inscription</button></a>
+      <a mat-list-item href="#1"><button mat-button >Trouver des freelanceurs</button></a>
+      <a mat-list-item href="#2"><button mat-button>Trouver des clients</button></a>
+      <a mat-list-item href="#2"><button mat-button>Trouver de l'aide</button></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <!--Fin de la liste des elements du menu de gauche-->
+  <mat-sidenav-content>
+    <!--Debut de la barre de navigation-->
+    <mat-toolbar class="toolbar">
+
+
+      <div class="logo-btn" *ngIf="isMobile==true">
+        <div>
+          logo
+        </div>
+
+      <!--Debut du boutton de toggle-->
+      <button class="menuitemicon" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <!--Fin du boutton de toggle-->
+      </div>
+
+
+
+      <!--Debut du boutton de logo-->
+      <div class="logo" *ngIf="isMobile ==false">
+        <button mat-button>logo</button>
+      </div>
+      <!--Fin du boutton de logo-->
+      <!--Debut de la navigation si on n'est pas sur un ecran de telephone-->
+      <div *ngIf="isMobile==false">
+        <button mat-button routerLink="/home">Acceuil</button>
+        <button mat-button>Projets</button>
+        <button mat-button>Freelances</button>
+        <button mat-button>A propos</button>
+        <button mat-button>Contacts</button>
+      </div>
+
+      <div class="auth" *ngIf="isMobile ==false">
+        <div class="search">
+          <input matInput type="search" name="sarcher" id="sarcher" class="input-chercher">
+          <mat-icon>search</mat-icon>
+        </div>
+      </div>
+
+      <!--Fin de la navigation si on n'est pas sur un ecran de telephone-->
+      <!--Debut de la navigation si on est sur un ecran de telephone-->
+    
+      <!--Fin de la navigation si on est sur un ecran de telephone-->
+    </mat-toolbar>
+    <!--Debut de la barre de navigation-->
+    <!-- Add Content Here -->
+
+
+    
+    <router-outlet></router-outlet>
+    <div class="fab">
+      <button mat-fab>+</button>
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

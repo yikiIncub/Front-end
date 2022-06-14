@@ -1,0 +1,25 @@
+<main class="main">
+    <div class="container">
+        <mat-card class="mat-card">
+            <h1>Je veux m'inscrire en tant que </h1>
+            <div class="mat-card-client-freelance">
+
+                <a mat-raised-button class="btn-client" (click)="type('client')" routerLink="/sign-up">
+                    <h2>Je suis un client</h2>
+                    <p> j'ai un projet a faire realiser </p>
+                </a>
+
+                <a mat-raised-button class="btn-freelance" (click)="type('freelanceur')" routerLink="/sign-up">
+                    <h2>je suis un freelanceur</h2>
+                    <p> je cherche a realiser des projet </p>
+                </a>
+            </div>
+            <div>-</div>
+            <div>Ou</div>
+
+            J'ai deja un compte <a href="#" mat-raised-button>Connexion</a>
+        </mat-card>
+
+
+    </div>
+</main>

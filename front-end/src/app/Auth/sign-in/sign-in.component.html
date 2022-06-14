@@ -1,0 +1,62 @@
+<main class="main">
+
+  <!--La toolbar pour annuler ou repartir sur la page d'acceuil-->
+<mat-toolbar class="toolbar">
+
+  <div class="sociaux">
+    <a href="#"><img src="../../assets/facebook.jpg" alt="../../assets/facebook.jpg" class="icons"></a>
+    <a href="#"><img src="../../assets/twitter.png" alt="../../assets/twitter.png" class="icons"></a> 
+    <a href="#"> <img src="../../assets/instagram.jpg" alt="../../assets/instagram.jpg" class="icons"></a> 
+</div>
+
+
+  <a mat-button [routerLink]="['/home']" [routerLinkActive]="'active'" ><img src="../../../assets/yiki.png" alt="../../../assets/yiki.png" class="logo"></a>
+</mat-toolbar>
+
+  <mat-card class="card">
+    <mat-card-header class="header-card">
+        <mat-card-title>
+          Connexion
+        </mat-card-title>
+        <div>
+          <img src="../../../assets/yiki.png" alt="../../../assets/yiki.png" srcset="" width="100px" height="100px">
+        </div>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <form [formGroup]="formdata">
+        <div>
+          <mat-form-field appearance="outline" class="input">
+            <mat-label>email</mat-label>
+            <input matInput placeholder="ex@example.com" [formControl]="email" required formControlName="email" class="email">
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline" class="input">
+            <mat-label>Entrez votre mot de passe</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" formControlName="password">
+            <mat-error *ngIf="password.invalid">{{getErrorMotDepasse()}}</mat-error>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      
+        <div class="redirection-de-connexion">
+          <a routerLink="/sign-up">Pas encore de compte ?</a>
+          <a href="#">Mot de passe oublié ?</a>
+        </div>
+         <!--Fin du formulaire-->
+      </form>
+    </mat-card-content>
+
+      <mat-card-footer class="div-btn-connexion">
+        <a mat-button (click)="onSubmit()" class="btn-connection">Se connecter</a>
+      </mat-card-footer>
+
+  </mat-card>
+
+
+</main>

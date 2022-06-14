@@ -1,0 +1,52 @@
+.container{
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+}
+
+.card-content{
+
+}
+
+.div-nom{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.div-prenom{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    border-radius: 10px;
+}
+
+.mydiv{
+    border-radius: 10px;
+    border: 1px;
+}
+
+.field{
+    width:100%;
+}
+
+.menu-check :checked {
+background-color: black;
+}
+
+.menu-check {
+    margin: 500px;
+    background-color: red;
+}
