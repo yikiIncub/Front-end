@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { ApiServiceService } from 'src/app/shared/Services/api-service.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-sign-in',
@@ -10,20 +11,17 @@ import { ApiServiceService } from 'src/app/shared/Services/api-service.service';
 })
 export class SignInComponent implements OnInit {
 
-  constructor(private fb:FormBuilder,
+  constructor(private _snackBar: MatSnackBar,
     private http:HttpClient,
-    private api:ApiServiceService) { }
+    private api:ApiServiceService,) { }
 
   formgroup !: FormGroup;
 
   ngOnInit(): void {}
 
   formdata = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]),
-    prenom: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(60)]),
     email: new FormControl('', [Validators.required, Validators.email, Validators.maxLength(100)]),
     password: new FormControl('', [Validators.required, Validators.minLength(8)]),
-    password_confirmation: new FormControl('', [Validators.required, Validators.minLength(8)])
   });
 
   hide=true
@@ -47,18 +45,33 @@ export class SignInComponent implements OnInit {
 
 
   onSubmit(){
-    let data=this.formgroup.value;
+    let data=this.formdata.value;
+
+    this._snackBar.open("Etat","Connexion reussie",
+    {
+       duration:1000,
+       panelClass:'green-snackbar',
+    });
 
    return this.http.post(`${this.api._baseurl}`+'/login',
     {
     email:data['email'],
     password:data['password']
     }
-    ).subscribe((result)=>{
-      console.log(result);
+    ).subscribe((result:any)=>{
+
+     // localStorage.setItem('access_token',result['access_token'])
+
+      
+ //    console.log(localStorage.getItem('access_token'));
+    
     })
     
   }
+
+
+
+  
 
   
 

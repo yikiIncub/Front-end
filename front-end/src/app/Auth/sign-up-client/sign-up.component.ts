@@ -43,11 +43,8 @@ export class SignUpComponent implements OnInit {
 
   hide = true;
 
-  test() {
-    console.log(this.formdata.controls['name'].touched);
-  }
-
   submit() {
+    console.log("Submit est cliquer");
     let data = this.formdata.value;
     return this.http.post(`${this.api._baseurl}` + '/register',
       {
@@ -59,7 +56,7 @@ export class SignUpComponent implements OnInit {
         password_confirmation: data['password_confirmation']
       }).subscribe(
         (result) => {
-          console.log(result);
+          console.log("Le resultat est : "+result);
         })
   }
 

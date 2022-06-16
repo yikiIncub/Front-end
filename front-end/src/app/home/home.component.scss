@@ -1,27 +1,28 @@
-    main {
+main {
+   width: 100%;
    padding: 0px;
    margin: 0px;
-   background-color: #eee;
 }
-mat-toolbar{
+
+mat-toolbar {
    padding-left: 12%;
    background-color: #eee;
    color: #FF531A;
 }
 
-
-.voir-plus{
+.voir-plus {
    display: flex;
    flex-flow: wrap row;
    justify-content: center;
    color: #243474;
-   .btn{
+
+   .btn {
       border: solid 1px;
       transition: all 0.8s;
    }
 }
 
-.btn:hover{
+.btn:hover {
    background-color: #243474;
    color: white;
    border: solid 1px;
@@ -30,110 +31,118 @@ mat-toolbar{
 
 /** Section des projet afficher a la une**/
 
-.section-projet-a-la-une{
+.section-projet-a-la-une {
    padding: 10px;
    margin: 10px;
    padding-top: 0px;
    margin-top: 0px;
 
    mat-card-title,
-   .description{
+   .description {
       display: flex;
       flex-flow: wrap column;
       text-align: center;
       justify-content: center;
-   };
+   }
 
-   mat-card-title{
-      background-color:#243474;
+   ;
+
+   mat-card-title {
+      background-color: #243474;
       color: white;
       padding: 10px;
       font-size: 16px;
    }
 
-   .savoir-plus{
+   .savoir-plus {
       display: flex;
       flex-flow: wrap row;
       justify-content: end;
       padding: 10px;
 
-      .btn-savoir-plus{
-         background-color:#243474;
+      .btn-savoir-plus {
+         background-color: #243474;
          color: white;
          transition: all 0.8s
-      };
+      }
 
-      .btn-savoir-plus:hover{
-         background-color:#243474;
+      ;
+
+      .btn-savoir-plus:hover {
+         background-color: #243474;
          color: white;
       }
-   };
+   }
 
-   span{
+   ;
+
+   span {
       font-weight: bold;
       font-size: 16px;
    }
 }
 
-.card-projet-a-la-une{
+.card-projet-a-la-une {
    margin: 10px;
-   transition:all 0.8s;
- }
-
-.card-projet-a-la-une:hover {
-border: solid orange 1px;
-border-radius: 10px;
-padding: 30px;
+   transition: all 0.8s;
 }
 
-.space-card-content{
+.card-projet-a-la-une:hover {
+   border: solid orange 1px;
+   border-radius: 10px;
+   padding: 30px;
+}
+
+.space-card-content {
    display: flex;
    flex-flow: wrap row;
    justify-content: space-between;
    text-align: center;
 }
 
-.container{
+.container {
    padding-left: 10%;
    padding-right: 10%;
 }
 
-
-
 /** Section info de la boite**/
 
-.section-info-yiki{
+.section-info-yiki {
 
 
-   .info-yiki{
+   .info-yiki {
       padding-bottom: 100%;
       transition: all 0.8s;
-   };
+   }
 
-   mat-card-title{
+   ;
+
+   mat-card-title {
       display: flex;
       flex-flow: wrap row;
       justify-content: center;
       text-align: center;
-      background-color:#243474;
+      background-color: #243474;
       color: white;
       padding: 10px;
-  
+
    }
 }
 
-.info-yiki:hover{
+.info-yiki:hover {
    padding: 30px;
    padding-bottom: 40%;
    border: solid orange 2px;
    border-radius: 10px;
 }
 
-.Projet-en-cours{
+.Projet-en-cours {
    padding-left: 12%;
-};
+}
 
-.projet-en-cours-de-realisation{
+;
+
+.projet-en-cours-de-realisation {
    display: flex;
    flex-flow: wrap row;
    padding: 0;
@@ -141,7 +150,7 @@ padding: 30px;
    padding-right: 8%;
    width: 100%;
 
-   mat-card-title{
+   mat-card-title {
       display: flex;
       flex-flow: wrap row;
       justify-content: center;
@@ -150,7 +159,7 @@ padding: 30px;
       transition: all 0.8s;
    }
 
-   .card-containt{
+   .card-containt {
       padding: 5px;
       margin: 5px;
       width: 30%;
@@ -158,43 +167,49 @@ padding: 30px;
 
    }
 
-   .card-containt:hover{
+   .card-containt:hover {
       margin: 0px;
       padding: 0px;
       border: solid 1px orange;
       border-radius: 10px;
 
-      mat-card-title{
+      mat-card-title {
          padding: 10px
       }
-   };
+   }
 
-   .card-projet{
+   ;
+
+   .card-projet {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-   };
+   }
 
-   span{
+   ;
+
+   span {
       font-weight: 500;
       font-size: 16px;
       text-align: start;
-   };
+   }
 
-   mat-card{
+   ;
+
+   mat-card {
       background-color: #243474;
       color: white;
    }
 
 }
 
-.voir-plus{
+.voir-plus {
    display: flex;
    flex-flow: wrap row;
    justify-content: center;
    color: #243474;
 
-   .btn{
+   .btn {
       border: solid 1px;
    }
 }
@@ -202,7 +217,7 @@ padding: 30px;
 
 /**Projet deja realiser**/
 
-.Projets-deja-realiser{
+.Projets-deja-realiser {
    padding: 0px;
    padding-left: 10%;
    padding-right: 10%;
@@ -210,50 +225,192 @@ padding: 30px;
    display: flex;
    flex-flow: wrap row;
 
-   mat-card-title{
+   mat-card-title {
       display: flex;
       flex-flow: wrap row;
       justify-content: center;
       color: #FF531A;
       padding: 5px;
       transition: all 0.8s;
-   };
+   }
 
-   .card-containt{
+   ;
+
+   .card-containt {
       padding: 5px;
       margin: 5px;
       width: 30%;
       transition: all 0.8s;
-   };
+   }
 
-   .card-containt:hover{
+   ;
+
+   .card-containt:hover {
       margin: 0px;
       padding: 0px;
       border: solid 1px orange;
       border-radius: 10px;
 
-      mat-card-title{
+      mat-card-title {
          padding: 10px
       }
-   };
+   }
 
-   .card-projet{
+   ;
+
+   .card-projet {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-   };
+   }
 
-   span{
+   ;
+
+   span {
       font-weight: 500;
       font-size: 16px;
       text-align: start;
    }
 
-   
-   mat-card{
+   ;
+
+   mat-card {
       background-color: #243474;
       color: white;
    }
 
 
+}
+
+@media only screen and (max-width: 600px) {
+   mat-toolbar {
+      width: 100%;
+   }
+
+   ;
+
+   .container {
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+
+      .section-projet-a-la-une {
+         padding: 0px;
+         margin: 0px;
+
+         mat-card-footer {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+
+
+            .savoir-plus {
+               display: flex;
+               flex-flow: wrap row;
+               align-items: center;
+               text-align: center;
+               padding: 10px;
+
+
+               .btn-savoir-plus {
+                  float: right;
+                  width: 100%;
+                  background-color: #243474;
+                  color: white;
+                  transition: all 0.8s
+               }
+
+               ;
+
+               .btn-savoir-plus:hover {
+                  background-color: #243474;
+                  color: white;
+               }
+            }
+
+            ;
+         }
+
+         ;
+      }
+
+      ;
+
+      mat-card {
+         padding: 0px;
+         margin: 5%;
+         width: 90%;
+         border-radius: 10px;
+      }
+
+      ;
+
+      mat-card-content {
+         padding-top: 10px;
+         padding-left: 5%;
+         padding-right: 5%;
+      }
+
+      mat-card-title {
+         padding: 0px;
+         margin: 0px;
+         margin-top: 5%;
+         height: max-content;
+         min-height: 30px;
+         border-radius: 5px;
+      }
+
+      ;
+
+      mat-card-footer {
+         width: 50%;
+      }
+
+      .section-info-yiki {
+         mat-card {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+         }
+
+         ;
+
+         .info-yiki {
+            transition: all 0.8s;
+         }
+
+         ;
+
+         mat-card-title {
+            display: flex;
+            flex-flow: wrap row;
+            justify-content: center;
+            text-align: center;
+            background-color: #243474;
+            color: white;
+            padding: 10px;
+         }
+      }
+   }
+
+   .Projets-deja-realiser,
+   .projet-en-cours-de-realisation {
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+
+      .card-containt {
+         margin: 10px;
+         padding: 10px;
+         padding-left: 0px;
+         padding-right: 0px;
+         margin-left: 0px;
+         margin-right: 0px;
+         width: 100%;
+         background-color: #243474;
+      }
+
+
+
+   }
 }

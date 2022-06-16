@@ -13,7 +13,6 @@ export class AuthServiceService {
     return user !== null && user.emailVerified !== false ? true : false;
   }
 
-
   type:string="";
 
 
